@@ -1,21 +1,21 @@
 "use strict";
 
-// service worker registration - remove if you're not going to use it
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
+let input = document.querySelector(".editor__input--js");
+const clear = document.querySelector(".control-panel__button--clear--js");
+const load = document.querySelector(".control-panel__button--load--js");
+const save = document.querySelector(".control-panel__button--save--js");
 
-// place your code below
+//console.log(input, remove, load, save);
 
+save.addEventListener('click', (e) => {
+  localStorage.setItem('input',input.value);
+})
 
+load.addEventListener('click', (e) => {
+  input.value = localStorage.getItem('input');
+})
 
-
+clear.addEventListener('click',(e) => {
+  input.value = "";
+})
