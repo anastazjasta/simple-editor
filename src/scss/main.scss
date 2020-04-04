@@ -21,19 +21,21 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+  font-size: 14px;
   color: $black;
   background: $white;
   padding: 16px;
   display: flex;
   justify-content: center;
   align-content: center;
+  min-height: 100vh;
 }
 
 .editor {
   padding-top: 192px;
   &__header {
-    font-size: 44px;
-    padding-bottom: 16px;
+    font-size: 64px;
+    padding-bottom: 32px;
     margin: 0;
   }
   &__input {
@@ -45,12 +47,15 @@ body {
     border-image: none !important;
     border-color: $grey;
     font-weight: normal;
-    font-size: 14px;
     line-height: 24px;
     &:focus {
       outline: none;
     }
 
+  }
+  &__label {
+    display: block;
+    padding-bottom: 16px;
   }
 }
 
@@ -67,7 +72,6 @@ body {
     text-decoration: none;
     text-align: center;
     font-weight: 600;
-    font-size: 14px;
     line-height: 16px;
     transition: background 250ms ease-in-out, transform 150ms ease;
     -webkit-appearance: none;
