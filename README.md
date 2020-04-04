@@ -1,4 +1,7 @@
-# wtf-gulp-starter
+# Simple Editor
+
+## How to run the page locally
+To run the page locally enter following commands:
 
 `npm install -g gulp-cli`
 
