@@ -1,16 +1,90 @@
 @import "_normalize";
 @import "_variables";
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
 
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
+@mixin border {
+  border-width: 1px;
+  border-radius: 3px;
+  border-color: $black;
+}
+
 body {
-  color: $yellow;
-  background: $violet;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: $black;
+  background: $white;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.editor {
+  padding-top: 192px;
+  &__header {
+    font-size: 44px;
+    padding-bottom: 16px;
+    margin: 0;
+  }
+  &__input {
+    @include border();
+    resize: none;
+    width: 544px;
+    height: 344px;
+    padding: 16px;
+    border-image: none !important;
+    border-color: $grey;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    &:focus {
+      outline: none;
+    }
+
+  }
+}
+
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  &__button {
+    @include border();
+    display: inline-block;
+    width: 160px;
+    height: 32px;
+    background: $white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &--save {
+      background: $black;
+      color: $white;
+    }
+    &:hover {
+      
+      outline: 2px solid $black;
+      outline-offset: -1px;
+      
+    }
+    &:active {
+      background: $grey;
+      outline: none;
+    }
+  }
 }

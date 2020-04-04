@@ -10,13 +10,16 @@
 </head>
 
 <body>
-  <h1>My editor</h1>
-  <textarea name="editor-input" placeholder="Lorem ipsum dolor sic amet..." class="editor-input"></textarea>
-  <div class = "control-panel">
-    <button class="control-panel__button">delete</button>
-    <button class="control-panel__button">load</button>
-    <button class="control-panel__button--save">save</button>
-  </div>
+  <section class="editor">
+  <h1 class = "editor__header">My editor</h1>
+  
+    <textarea class="editor__input" placeholder="Lorem ipsum dolor sic amet..." name="editor-input"></textarea>
+    <div class="control-panel">
+      <button class="control-panel__button">delete</button>
+      <button class="control-panel__button">load</button>
+      <button class="control-panel__button control-panel__button--save">save</button>
+    </div>
+  </section>
 
   <script src="js/main.js"></script>
 </body>
