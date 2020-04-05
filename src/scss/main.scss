@@ -84,11 +84,13 @@ body {
       
       outline: 2px solid $black;
       outline-offset: -1px;
+      transform: scale(1.05);
       
     }
     &:active {
       background: $grey;
       outline: none;
+      transform: scale(0.95);
     }
     &:focus {
       outline: none;
