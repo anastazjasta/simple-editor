@@ -90,5 +90,8 @@ body {
       background: $grey;
       outline: none;
     }
+    &:focus {
+      outline: none;
+    }
   }
 }
