@@ -1,4 +1,10 @@
-# Simple Editor
+![Homepage screenshot](gh/editor.png)
+
+
+# Simple Editor 
+
+Simple editor with local storage support:
+[My editor](https://anastazjasta.github.io/simple-editor/)
 
 ## How to run the page locally
 To run the page locally enter following commands:
@@ -9,4 +15,4 @@ To run the page locally enter following commands:
 
 `gulp`
 
-To publish your page using github pages use `npm run deploy`
+To publish page using github pages use `npm run deploy`
